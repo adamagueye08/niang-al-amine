@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediFournitures - Votre fournisseur de matériels médicaux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #3228be;
+            --secondary: #4299e1;
+            --accent: #3182ce;
+            --dark: #2d3748;
+            --light: #f7fafc;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            /* ou transparent si tu veux ton background */
+        }
+
+        .logo {
+            height: 75px;
+            /* ajuste selon la taille désirée */
+            left: 100%;
+            ;
+            width: 90px;
+
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 40px;
+            right: 40px;
+            background-color: #25d366;
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px #999;
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            transform: scale(1.1);
+        }
+
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('OIP (1).webp ');
+            background-size: cover;
+            background-position: center;
+            min-height: 60vh;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-card {
+            transition: all 0.3s ease;
+        }
+
+        .category-card:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="font-sans bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+
+                <header>
+                    <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\logo.jpg"
+                        alt="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\logo.jpg" class="logo">
+                </header>
+
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="text-blue-600 font-medium">Accueil</a>
+                <a href="#products" class="text-gray-600 hover:text-blue-600">Produits</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600">À propos</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+            </div>
+            <a href="https://wa.me/773777339"
+                class="hidden md:block bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full font-medium transition">
+                <i class="fab fa-whatsapp mr-2"></i> Commander
+            </a>
+            <button class="md:hidden text-gray-600 focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section flex items-center justify-center text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">Votre fournisseur de matériels médicaux de
+                confiance</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto">Des produits de qualité pour les professionnels de
+                santé, disponibles rapidement et à des prix compétitifs</p>
+            <div class="space-x-4">
+                <a href="https://wa.me/773777339"
+                    class="bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium text-lg inline-flex items-center transition">
+                    <i class="fab fa-whatsapp mr-2"></i> Commander sur WhatsApp
+                </a>
+                <a href="#products"
+                    class="bg-white hover:bg-gray-100 text-blue-600 px-6 py-3 rounded-full font-medium text-lg transition">
+                    Voir nos produits
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800">Nos produits phares</h2>
+
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\116_635bb23680401_1666953782.jpg"
+                            alt="Paquet de gants médicaux nitrile bleus non stériles taille M, 100 pièces par boîte, vue rapprochée avec un gant dépliée"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Gants Nitrile Bleu</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gants sans latex, résistants aux produits chimiques, boîte de 100
+                            pièces.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je%20souhaite%20commander%20des%20Gants%20Nitrile%20Bleu"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\454651_1_b.jpg"
+                            alt="Tensiomètre électronique bras professionnel avec écran LCD large et brassard réglable, posé sur table de consultation médicale"
+                            class="w-full h-48 object-cover">
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Tensiomètre Bras Digital</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.0 (86 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Tensiomètre électronique pour bras avec mémoire et détection
+                            d'arythmie.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je%20souhaite%20commander%20un%20Tensiomètre%20Bras%20Digital"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\télécharger.webp"
+                            alt="Masques chirurgicaux jetables de type IIR en boîte de 50 pièces avec élastiques blancs et plis verticaux, vue perspective"
+                            class="w-full h-48 object-cover">
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Masques Chirurgicaux IIR</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">5.0 (245 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Masques à 3 plis avec filtration bactérienne >98%, boîte de 50
+                            pièces.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je%20souhaite%20commander%20des%20Masques%20Chirurgicaux%20IIR"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\OIP.webp"
+                            alt="Lit médical électrique avec télécommande et rails latéraux en position relevée, matelas en mousse bleu dans une chambre d'hôpital"
+                            class="w-full h-48 object-cover">
+
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Lit Médical Électrique</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (42 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Lit médicalisable électrique avec télécommande, hauteur et
+                            inclinaison réglables.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je%20souhaite%20commander%20un%20Lit%20Médical%20Électrique"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\EzDxMalaria-Pan-Rapid-Malaria-Ag-Detection-Test.jpg"
+                            alt="Test de detection de l'entigene du malaria " class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Paludisme pf </h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Test de detection de l'entigene du malaria.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je souhaite commander un Test de detection de l'entigene du malaria"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\IMG-20250819-WA0092.jpg"
+                            alt="Paquet de gants médicaux nitrile bleus non stériles taille M, 100 pièces par boîte, vue rapprochée avec un gant dépliée"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Catheter</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Catheter pour le traitement des maladies cardiovasculaires,
+                            neurologiques, etc.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je souhaite commander un Catheter"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\IMG-20250819-WA0093.jpg"
+                            alt="Paquet de gants médicaux nitrile bleus non stériles taille M, 100 pièces par boîte, vue rapprochée avec un gant dépliée"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">Coton chirurgical</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">coton hydrophile chirugical en rouleau.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je souhaite commander un Coton chirurgical"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\IMG-20250819-WA0094.jpg"
+                            alt="Paquet de gants médicaux nitrile bleus non stériles taille M, 100 pièces par boîte, vue rapprochée avec un gant dépliée"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">accu-chek</h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4"> le lecteur de glycémie qui facilite la surveillance de la
+                            glycémie</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=je souhaite commander un accu-chek"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 border border-gray-100">
+                    <div class="relative">
+                        <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\IMG-20250819-WA0098.jpg"
+                            alt="Paquet de gants médicaux nitrile bleus non stériles taille M, 100 pièces par boîte, vue rapprochée avec un gant dépliée"
+                            class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold mb-2 text-gray-800">gants d'examen medicaux en latex </h3>
+                        <div class="flex items-center mb-3">
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span class="text-gray-500 text-sm ml-2">4.5 (128 avis)</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Ces gants d'examen non poudrés ont été fabriqués à partir de
+                            latex, une matière qui offre une grande élasticité et qui est aussi très confortable.</p>
+                        <div class="flex justify-between items-center">
+
+                            <a href="https://wa.me/773777339?text=Je souhaite commander des gants d'examen en latex"
+                                class="bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-full text-sm font-medium inline-flex items-center transition">
+                                <i class="fab fa-whatsapp mr-2"></i> Commander
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col lg:flex-row items-center">
+                <div class="lg:w-1/2 mb-10 lg:mb-0 lg:pr-10">
+                    <img src="c:\Users\OUSMANE GUEYE\Documents\Mes projets\mediplus\logo.jpg"
+                        alt="Équipe de professionnels de santé souriants en blouse blanche regardant la caméra dans un cabinet médical moderne et bien éclairé"
+                        class="w-full rounded-lg shadow-lg">
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold mb-6 text-gray-800">À propos de Niang AL Amine distribution</h2>
+                    <p class="text-gray-600 mb-6">Nous sommes une entreprise de distribution de matériels médicaux qui
+                        s'est rapidement imposée comme un
+                        acteur clé dans la distribution de matériels médicaux pour les professionnels de santé au
+                        Senegal.</p>
+                    <p class="text-gray-600 mb-6">Notre mission est de fournir des équipements médicaux de qualité à des
+                        prix accessibles, tout en offrant un service client réactif et personnalisé.</p>
+
+                    <div class="space-y-4 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-800">Produits certifiés</h3>
+                                <p class="text-gray-600">Tous nos produits répondent aux normes européennes en vigueur.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
+                                    <i class="fas fa-truck"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-800">Livraison rapide</h3>
+                                <p class="text-gray-600">Expédition sous 24-48h pour la plupart des articles en stock.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 mt-1">
+                                <div
+                                    class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
+                                    <i class="fas fa-headset"></i>
+                                </div>
+                            </div>
+                            <div class="ml-3">
+                                <h3 class="text-lg font-medium text-gray-800">Support client</h3>
+                                <p class="text-gray-600">Assistance technique et conseils par WhatsApp ou téléphone.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="#contact"
+                        class="inline-block bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-full font-medium transition">
+                        Nous contacter
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Order -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-16 text-gray-800">Comment commander ?</h2>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Step 1 -->
+                <div class="text-center px-6 py-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div
+                        class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                        1</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Choisissez vos produits</h3>
+                    <p class="text-gray-600">Parcourez notre catalogue et sélectionnez les articles dont vous avez
+                        besoin.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center px-6 py-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div
+                        class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                        2</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Contactez-nous sur WhatsApp</h3>
+                    <p class="text-gray-600">Cliquez sur le bouton WhatsApp pour nous envoyer votre liste de produits.
+                    </p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center px-6 py-8 bg-white rounded-lg shadow-sm border border-gray-100">
+                    <div
+                        class="w-16 h-16 bg-blue-500 rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-6">
+                        3</div>
+                    <h3 class="text-xl font-bold mb-4 text-gray-800">Livraison ou retrait</h3>
+                    <p class="text-gray-600">Recevez votre commande à domicile ou retirez-la dans notre entrepôt.</p>
+                </div>
+            </div>
+
+            <div class="max-w-2xl mx-auto mt-12 bg-blue-50 border border-blue-200 rounded-lg p-6 text-center">
+                <h3 class="text-xl font-bold mb-3 text-blue-800">Des questions avant de commander ?</h3>
+                <p class="text-blue-700 mb-4">Notre équipe est disponible pour vous conseiller sur le choix des produits
+                    ou répondre à vos questions techniques.</p>
+                <a href="https://wa.me/773777339"
+                    class="inline-block bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-full font-medium transition">
+                    <i class="fab fa-whatsapp mr-2"></i> Discuter avec nos conseillers
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12 text-gray-800">Nous contacter</h2>
+
+            <div class="flex flex-col lg:flex-row gap-12">
+                <div class="lg:w-1/2 order-2 lg:order-1">
+                    <form class="space-y-6">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom complet</label>
+                            <input type="text" id="name"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Votre nom">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Adresse
+                                email</label>
+                            <input type="email" id="email"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="email@exemple.com">
+                        </div>
+
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">Téléphone</label>
+                            <input type="tel" id="phone"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="78 536 45 14">
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                                placeholder="Dites-nous comment nous pouvons vous aider"></textarea>
+                        </div>
+
+                        <button type="submit"
+                            class="w-full bg-blue-500 hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition">Envoyer
+                            le message</button>
+                    </form>
+                </div>
+
+                <div class="lg:w-1/2 order-1 lg:order-2">
+                    <div class="bg-gray-50 p-8 rounded-lg h-full">
+                        <h3 class="text-xl font-bold mb-6 text-gray-800">Coordonnées</h3>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <h3 class="text-lg font-medium text-gray-800">Adresse</h3>
+                                    <p class="text-gray-600"><br> Dakar 70, Avenue Blaise Diagne</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div
+                                        class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-500">
+                                        <i class="fas fa-phone-alt"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <h3 class="text-lg font-medium text-gray-800">Téléphone</h3>
+                                    <p class="text-gray-600">77 377 73 39</p>
+                                    <p class="text-sm text-gray-500 mt-1">Lun-sam : 7h30-18h30</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+
+                                </div>
+
+                            </div>
+
+                            <div class="pt-4">
+                                <h3 class="text-lg font-medium mb-4 text-gray-800">Nous trouver</h3>
+                                <div class="overflow-hidden rounded-lg">
+                                    <iframe
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d12885.305690254077!2d-17.468016372374684!3d14.680829229081231!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xec1725930c803cf%3A0xf28fb9cd10e98a70!2s70%20Av.%20Blaise%20Diagne%2C%20Dakar!5e1!3m2!1sfr!2ssn!4v1756050321024!5m2!1sfr!2ssn"
+                                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/773777339" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Niang AL Amine distribution</h3>
+                    <p class="text-gray-300">Fournisseur de matériels médicaux pour les professionnels de santé.</p>
+
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Liens rapides</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-300 hover:text-white">Accueil</a></li>
+                        <li><a href="#products" class="text-gray-300 hover:text-white">Produits</a></li>
+                        <li><a href="#categories" class="text-gray-300 hover:text-white">Catégories</a></li>
+                        <li><a href="#about" class="text-gray-300 hover:text-white">À propos</a></li>
+                        <li><a href="#contact" class="text-gray-300 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Catégories</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#consommables" class="text-gray-300 hover:text-white">Consommables</a></li>
+                        <li><a href="#equipements" class="text-gray-300 hover:text-white">Petits équipements</a></li>
+                        <li><a href="#mobilier" class="text-gray-300 hover:text-white">Mobilier médical</a></li>
+                        <li><a href="#hygiene" class="text-gray-300 hover:text-white">Hygiène & désinfection</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Newsletter</h3>
+                    <p class="text-gray-300 mb-4">Abonnez-vous pour recevoir nos offres et actualités.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Votre email"
+                            class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-800">
+                        <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-300 mb-4 md:mb-0">&copy; 2025 Niang AL Amine distribution. Tous droits réservés.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Mentions légales</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Politique de confidentialité</a>
+                    <a href="#" class="text-gray-300 hover:text-white text-sm">Conditions générales</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle functionality would go here
+        // Simple product filter example
+        document.getElementById('filter').addEventListener('change', function () {
+            const selectedCategory = this.value;
+            // In a real implementation, this would filter the products displayed
+            console.log(`Filtering by: ${selectedCategory}`);
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
